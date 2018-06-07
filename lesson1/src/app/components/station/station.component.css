@@ -1,0 +1,21 @@
+header {
+    background: #EDEDEE;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.line {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.line span {
+    margin: 0 20px;
+}
+
+.line span.line-destination {
+    flex-grow: 1;
+    direction: rtl;
+    text-align: right;
+}

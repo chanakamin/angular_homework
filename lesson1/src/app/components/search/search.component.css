@@ -1,0 +1,24 @@
+
+:host {
+    margin: 20px 0;
+    display: block;
+}
+
+.search {
+    width: 30%;
+    margin: auto;
+    direction: rtl;
+}
+
+.search label {
+    min-width: 65px;
+    display: inline-block;
+}
+
+.search button {
+    width: 100px;
+}
+
+.search input {
+    width: 60px;
+}

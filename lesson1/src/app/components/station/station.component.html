@@ -1,0 +1,20 @@
+<header>
+  {{currentStation.name}}
+</header>
+<ul class="lines">
+  <li class="line">
+    <span class="line-number">{{lines[0].bus.number}}</span>    
+    <span class="line-destination">{{lines[0].bus.stations[lines[0].bus.stations.length -1].station.name}}</span>
+    <span class="line-time">{{lines[0].timeFromNow}}</span>
+  </li>
+  <li class="line">
+    <span class="line-number">{{lines[1].bus.number}}</span>    
+    <span class="line-destination">{{lines[1].bus.stations[lines[1].bus.stations.length -1].station.name}}</span>
+    <span class="line-time">{{lines[1].timeFromNow}}</span>
+  </li>
+  <li class="line">
+    <span class="line-number">{{lines[2].bus.number}}</span>    
+    <span class="line-destination">{{lines[2].bus.stations[lines[2].bus.stations.length -1].station.name}}</span>
+    <span class="line-time">{{lines[2].timeFromNow}}</span>
+  </li>
+</ul>

@@ -1,0 +1,19 @@
+.options {
+    background: #EAEAEA;
+    padding: 10px;
+}
+
+.option {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.selected {
+    color: #2C94FE;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row-reverse;
+}
