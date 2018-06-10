@@ -1,0 +1,30 @@
+<div class="search">
+  <label for="search-student">חיפוש תלמיד:</label>
+  <input type="text" id="search-student" [(ngModel)]="searchStudents" (keydown)="filterStudents()" />
+</div>
+<div class="students">
+  <div class="headers">
+    <span class="change-mode-header">שינוי</span>
+    <span class="name-header">שם</span>
+    <span class="mark-header" *ngFor="let mark of students[0].marks">
+      {{mark.subject}}
+    </span>
+  </div>
+  <ul>
+    <li *ngFor="let student of filteredStudents; let i = index;" [class.excellent]="student.average > 90">
+      <span class="change-mode" (click)="modes[i] = !modes[i]">עריכה</span>
+      <span class="name">{{student.name}}</span>
+      <div class="marks" *ngIf="!modes[i]">
+        <span *ngFor="let m of student.marks" class="mark">
+          {{m.mark}}
+        </span>
+      </div>
+      
+      <div class="edit-marks" *ngIf="modes[i]">
+        <span *ngFor="let m of student.marks"  class="mark">
+          <input type="number" [(ngModel)]="m.mark"/>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>

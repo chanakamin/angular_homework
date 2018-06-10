@@ -8,6 +8,7 @@ import { OptionsComponent } from './components/options/options.component';
 import { SearchComponent } from './components/search/search.component';
 import { ContentComponent } from './components/content/content.component';
 import { StationComponent } from './components/station/station.component';
+import { LineComponent } from './components/line/line.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { StationComponent } from './components/station/station.component';
     OptionsComponent,
     SearchComponent,
     ContentComponent,
-    StationComponent
+    StationComponent,
+    LineComponent
   ],
   imports: [
     BrowserModule

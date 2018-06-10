@@ -1,0 +1,42 @@
+.search {
+    text-align: right;
+    direction: rtl;
+}
+
+.marks, .edit-marks {
+    display: inline-block;
+}
+
+li {
+    direction: rtl;
+    text-align: right;
+}
+
+.excellent {
+    color: #12abc3;
+}
+
+.change-mode {
+    cursor: pointer;
+}
+
+.headers {
+    direction: rtl;
+    text-align: right;
+}
+
+.change-mode, .change-mode-header, .name, .name-header {
+    width: 100px;
+    display: inline-block;
+}
+
+.mark, .mark-header {
+    width: 80px;
+    display: inline-block;
+    padding: 0 10px;
+    border-left: 1px solid black;
+}
+
+.edit-marks input {
+    width: 40px;
+}

@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="menu">
+  <div class="option" [class.selected]="option == 1" (click)="changeOption()">תלמידים</div>
+  <div class="option" [class.selected]="option == 2" (click)="changeOption()">מורים</div>
+</div>
+<div class="content">
+  <app-students *ngIf="option == 1"></app-students>
+  <app-teachers *ngIf="option == 2"></app-teachers>
+</div>
+
