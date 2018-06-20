@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let flight of flights" (mouseover)="overFlight(flight)" (mouseleave)=leaveFlight() [class.over]="overedFlight === flight" (click)="selectFlight(flight)">
+    {{flight.destination.name}}
+  </li>
+</ul>

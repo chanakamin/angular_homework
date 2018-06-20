@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { StudentsComponent } from './components/students/students.component';
 import { TeachersComponent } from './components/teachers/teachers.component';
+import { StudentsService } from "./students.service";
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { TeachersComponent } from './components/teachers/teachers.component';
     FormsModule
   ],
   providers: [    
+    StudentsService
   ],
   bootstrap: [AppComponent]
 })

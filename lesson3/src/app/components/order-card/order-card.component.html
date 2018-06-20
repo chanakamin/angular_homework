@@ -1,0 +1,24 @@
+<h2>Order your card</h2>
+<section class="order">
+  <h3> From: {{flight.origin.name}} </h3>
+  <h3> To: {{flight.destination.name}} </h3>
+  <div>
+    <input #name placeholder="your name"/>
+  </div>
+  <div>  
+    Select your class: 
+    <select [(ngModel)]="selectedClass" >
+      <option *ngFor="let class of classes" [ngValue]="class">{{ class.name }}</option>
+    </select>
+
+    <br/>
+    Price: {{ flight.price * selectedClass.price }}
+  </div>
+  <div>
+    Flight Time: 
+    <select [(ngModel)]="flightTime" >
+        <option *ngFor="let item of flight.schedule" [ngValue]="item"> {{ item.day }}, {{ item.hour }}:{{ item.minute }}</option>
+      </select>
+  </div>
+  <button  [disabled]="!flightTime || !name.value" (click)="orderTicket(name.value)">Order this ticket </button>
+</section>

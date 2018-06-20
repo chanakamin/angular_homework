@@ -1,0 +1,4 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-destination-list  (flightSelected)="selectedFlight = $event; orderTicket = false"></app-destination-list>
+<app-destination [flight]="selectedFlight" *ngIf="selectedFlight" (order)="orderTicket = true"></app-destination>
+<app-order-card  *ngIf="orderTicket" [flight]="selectedFlight"  (ticketOrdered)="orderTicket = false"></app-order-card>

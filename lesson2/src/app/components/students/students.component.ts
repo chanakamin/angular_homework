@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Student, students } from './../../classes/student'; 
+import { StudentsService } from "./../../students.service";
 
 @Component({
   selector: 'app-students',
@@ -21,7 +22,7 @@ export class StudentsComponent implements OnInit {
     }
   }
 
-  constructor() {
+  constructor(public _studentService: StudentsService) {
     this.filteredStudents = this.students;
     this.modes = this.filteredStudents.map(() => false);
    }

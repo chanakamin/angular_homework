@@ -1,0 +1,25 @@
+<section class="flight-details">
+  <div class="details">
+    From: {{ flight.origin.name }}
+  </div>
+  <div class="details">
+    To: {{ flight.destination.name }}
+  </div>
+  <div class="details">
+    Price: {{ flight.price }}
+  </div>
+  <div class="details">
+    Flight duration: {{ flight.flight_duration }} hours
+  </div>
+  <div class="details">
+    Hours Difference: {{ flight.hour_diff }}
+  </div>
+  <div class="details">
+    Schedule: <br/>
+    <span *ngFor="let item of flight.schedule">
+      {{ item.day }}, {{ item.hour }}:{{ item.minute }} <br/>
+    </span>
+  </div>
+
+  <button (click)="orderTicket()">Order Ticket</button>
+</section>
